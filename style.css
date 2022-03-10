@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+@font-face {
+    font-family: "Eghesis";
+    src: url('font/Ephesis-Regular.ttf');
+}
+
+:root {
+    --primaryColor: #6d28d9;
+    --beutifyColor: #3e00a1;
+    --secondaryColor: #ede9fe;
+    --secondaryColor-hover: #c9c2e2;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--mainBlack);
+    background-color: var(--mainWhite);
+    font-family: "Lato", sans-serif;
+    background-color: var(--bodyColor);
+    position: relative;
+}
+
+.navbar {
+    background-color: var(--secondaryColor);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-title {
+    color: var(--beutifyColor);
+    font-weight: 900;
+    font-size: 2rem;
+    font-family: "Eghesis";
+}
+
+.navbar-center {
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#btn {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 15px;
+    color: var(--primaryColor);
+    font-size: 25px;
+    transition: transform .3s ease-in-out;
+}
+
+.menu {
+    background-color: var(--beutifyColor);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 11vw;
+    height: 100vh;
+    transform: translateX(-92rem);
+    transition: transform .3s ease;
+    float: left;
+}
+
+.menu.active {
+    transform: translateX(-81rem);
+}
+
+.menu ul {
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+    color: white;
+}
+
+li {
+    padding: 4px 4px 10px 4px;
+    margin: 0;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.cart-btn {
+    color: var(--primaryColor);
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-icon i,
+.cart-btn i {
+    font-size: 1.4rem;
+}
+
+.cart-items {
+    position: absolute;
+    background-color: var(--mainRed);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--mainWhite);
+    font-size: .75rem;
+    top: -8px;
+    right: -8px;
+}
+
+/*------------- end of navbar ------------- */
+/* ------- start of product section -------  */
+
+.section-title {
+    margin: 2rem 0;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 1rem;
+}
+
+.products-center {
+    width: 100%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 2.5rem;
+}
+
+.product {
+    background-color: var(--mainWhite);
+    padding-bottom: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-img {
+    width: 100%;
+    min-height: 120px;
+    border-radius: 7px 7px 0 0;
+}
+
+.product-desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: space-around;
+    margin-top: 1rem;
+}
+
+.product-title {
+    padding-right: 30px;
+}
+
+.add-to-cart {
+    outline: none;
+    border: none;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: var(--secondaryColor-hover);
+    box-shadow: 
+    1px 1px 15px var(--primaryColor),
+    1px -1px 15px var(--primaryColor),
+    -1px 1px 15px var(--primaryColor),
+    -1px -1px 15px var(--primaryColor);
+}
+
+.product-price {
+    color: var(--primaryColor);
+    font-weight: 700;
+}
